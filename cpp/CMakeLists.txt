@@ -34,7 +34,7 @@ set(CVMATIO_PATH "/home/samarth/Documents/MATLAB/cvmatio/")
 set(NUMPY_OPENCV_CONVERTER_PATH "/home/samarth/libraries/numpy-opencv-converter/")
 
 add_executable(edge_boxes_mat src/edge_boxes_mat.cpp src/edge_nms.cpp src/util.cpp)
-target_link_libraries(edge_boxes_mat ${OpenCV_LIBS} /home/samarth/Documents/MATLAB/cvmatio/lib/libcvmatio.so)
+target_link_libraries(edge_boxes_mat ${OpenCV_LIBS} ${CVMATIO_PATH}/lib/libcvmatio.so)
 target_include_directories(edge_boxes_mat PRIVATE "${CVMATIO_PATH}/include")
 
 add_executable(edge_boxes_demo src/edge_boxes_demo.cpp src/edge_boxes.cpp src/edge_detect.cpp src/edge_nms.cpp src/util.cpp)
